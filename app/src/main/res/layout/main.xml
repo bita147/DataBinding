@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data>
-
-        <variable
-            name="name"
-            type="String" />
-
-        <variable
-            name="user"
-            type="com.senta.databinding.PersonDTO" />
-    </data>
-
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,35 +12,36 @@
         tools:context="com.senta.databinding.MainActivity">
 
         <TextView
+            android:id="@+id/tv_login_cap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/login"
             android:textColor="@color/secondary_text"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/tv_first_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{user.firstName}" />
-
-        <TextView
-            android:id="@+id/tv_last_name"
+        <EditText
+            android:id="@+id/et_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.lastName}" />
-
-        <TextView
-            android:id="@+id/tv_mobile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{user.mobile}" />
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="10" />
 
         <EditText
-            android:id="@+id/et_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:id="@+id/et_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Submit" />
     </LinearLayout>
 
 </layout>
